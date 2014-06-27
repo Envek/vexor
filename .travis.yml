@@ -6,4 +6,6 @@ rvm:
 before_install:
   - ./install/install_dependencies.sh
 
+image: trusty-full
+
 script: rake test
