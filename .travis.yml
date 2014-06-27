@@ -1,6 +1,9 @@
 language: ruby
 
 rvm:
-  - 2.1.2
+  - 2.1.2-gost
+
+before_install:
+  - ./install_dependencies.sh
 
 script: rake test
