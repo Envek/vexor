@@ -7,6 +7,6 @@ before_install:
   - ./install/install_dependencies.sh
 
 image:
-  - vexor-trusty-full
+  - dmexe/vexor-trusty-full
 
 script: rake test
