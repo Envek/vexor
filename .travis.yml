@@ -1,10 +1,7 @@
 language: ruby
 
 rvm:
-  - 2.1.2-gost
-
-before_install:
-  - ./install/install_dependencies.sh
+  - 2.1.2
 
 image:
   - dmexe/vexor-trusty-full
