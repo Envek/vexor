@@ -1,9 +1,13 @@
 language: ruby
 
-rvm:
-  - 2.1.2
+before_install:
+  - /opt/ruby-build/bin/ruby-build install/ruby-2.1.2-gost ~/ruby-2.1.2-gost --patch < install/enable_gost.patch
+  - export PATH=~/ruby-2.1.2-gost/bin:$PATH
+  - gem install bundler
 
-image:
-  - dmexe/vexor-trusty-full
+cache:
+  directories: ~/ruby-2.1.2-gost
+
+install: bundle install
 
 script: rake test
