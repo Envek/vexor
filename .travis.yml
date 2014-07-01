@@ -1,8 +1,8 @@
 language: ruby
 
 before_install:
-  - if [[ ! -x ~/ruby-2.1.2-gost/bin/ruby ]]; then \
-    /opt/ruby-build/bin/ruby-build install/ruby-2.1.2-gost ~/ruby-2.1.2-gost --patch < install/enable_gost.patch; \
+  - if [[ ! -x ~/ruby-2.1.2-gost/bin/ruby ]]; then
+    /opt/ruby-build/bin/ruby-build install/ruby-2.1.2-gost ~/ruby-2.1.2-gost --patch < install/enable_gost.patch;
     fi
   - export PATH=~/ruby-2.1.2-gost/bin:$PATH
   - gem install bundler
