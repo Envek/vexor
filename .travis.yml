@@ -8,8 +8,11 @@ before_install:
   - gem install bundler
 
 cache:
-  directories: ~/ruby-2.1.2-gost
+  directories:
+    - ~/ruby-2.1.2-gost
 
-install: bundle install
+install:
+  - which ruby
+  - bundle install
 
 script: bundle exec rake test
