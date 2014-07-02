@@ -15,4 +15,6 @@ install:
   - which ruby
   - bundle install
 
-script: bundle exec rake test
+script:
+  - which ruby
+  - bundle exec rake test
