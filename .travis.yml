@@ -1,6 +1,5 @@
 before_install:
-  - sudo bash -l -c "cat $(pwd)/install/openssl.cnf.tail | cat - /etc/ssl/openssl.cnf > /tmp/out && mv /tmp/out /etc/ssl/openssl.cnf"
-  - sudo bash -l -c 'cat install/openssl.cnf.tail >> /etc/ssl/openssl.cnf'
+  - sudo cp -f install/openssl.cnf /etc/ssl/openssl.cnf
   - openssl ciphers |  tr ":" "\n" | grep GOST
   - test -x ~/ruby-2.1.2-gost/bin/ruby || (cat install/enable_gost.patch | env CONFIGURE_OPTS="--disable-install-rdoc" ruby-build --patch 2.1.2 ~/ruby-2.1.2-gost)
   - export GEM_HOME=~/rubygems
