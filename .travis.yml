@@ -1,3 +1,5 @@
+image: vexor-trusty-full
+
 before_install:
   - sudo bash -l -c "cat $(pwd)/install/openssl.cnf.tail | cat - /etc/ssl/openssl.cnf > /tmp/out && mv /tmp/out /etc/ssl/openssl.cnf"
   - sudo bash -l -c 'cat install/openssl.cnf.tail >> /etc/ssl/openssl.cnf'
