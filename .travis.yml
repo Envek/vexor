@@ -3,8 +3,6 @@ before_install:
   - test -x ~/ruby-2.1.2-gost/bin/ruby || (cat install/enable_gost.patch | env CONFIGURE_OPTS="--disable-install-rdoc" ruby-build --patch 2.1.2 ~/ruby-2.1.2-gost)
   - export GEM_HOME=~/rubygems
   - export PATH=~/ruby-2.1.2-gost/bin:~/rubygems/bin:$PATH
-  - openssl version
-  - find /usr/lib -name libgost.so
   - gem install bundler --no-ri --no-rdoc
   - ruby --version
   - gem --version

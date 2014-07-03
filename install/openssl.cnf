@@ -359,6 +359,5 @@ engines = engine_section
 gost = gost_section
 [gost_section]
 default_algorithms = ALL
-dynamic_path = /usr/lib/x86_64-linux-gnu/openssl-1.0.0/engines/libgost.so
 engine_id = gost
 CRYPT_PARAMS = id-Gost28147-89-CryptoPro-A-ParamSet
