@@ -1,0 +1,2 @@
+# See [openssl_def] section at the end of file for GOST settings
+openssl_conf = openssl_def
