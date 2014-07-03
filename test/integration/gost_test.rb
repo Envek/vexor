@@ -12,7 +12,6 @@ class GostTest < ActionDispatch::IntegrationTest
   end
 
   test 'connection to the HTTPS server with GOST algorithm' do
-=begin
     socket = TCPSocket.open('ssl-gost.envek.name', 443)
     ssl_context = OpenSSL::SSL::SSLContext.new()
     ssl_socket = OpenSSL::SSL::SSLSocket.new(socket, ssl_context)
@@ -32,7 +31,6 @@ class GostTest < ActionDispatch::IntegrationTest
     ssl_socket.close
 
     assert reply =~ /GOST2001/
-=end
   end
 
   test 'Able to read GOST private key and do signing' do
