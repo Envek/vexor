@@ -12,10 +12,5 @@ before_install:
 install: 
   - bundle install
 
-cache:
-  directories:
-    - ~/ruby-2.1.2-gost
-    - ~/rubygems
-
 script:
   - bundle exec rake test

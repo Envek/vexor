@@ -4,12 +4,12 @@ require 'socket'
 
 class GostTest < ActionDispatch::IntegrationTest
   @@gost_loaded = false
-  
-  setup :initialize_gost
+
   setup do
     ruby_executable_path = File.join( RbConfig::CONFIG['bindir'], RbConfig::CONFIG['RUBY_INSTALL_NAME'] + RbConfig::CONFIG['EXEEXT'])
     puts "This test is run under Ruby which located at #{ruby_executable_path}"
   end
+  setup :initialize_gost
 
   test 'connection to the HTTPS server with GOST algorithm' do
     socket = TCPSocket.open('ssl-gost.envek.name', 443)
