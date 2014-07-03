@@ -7,6 +7,8 @@ before_install:
   - ruby --version
   - gem --version
   - bundle --version
+  - locate libgost.so
+  - openssl version
   
 install: 
   - bundle install
